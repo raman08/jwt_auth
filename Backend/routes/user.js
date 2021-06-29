@@ -5,11 +5,13 @@ const User = require('../models/user');
 const router = express.Router();
 
 const userController = require('../controllers/user');
+const { isAuth } = require('../middleware/auth');
+
+router.get('/locked', isAuth, userController.getLocked);
 
 router.post(
 	'/login',
 	body('email').isEmail().withMessage('Not a vaild Email!'),
-
 	userController.postLogin
 );
 

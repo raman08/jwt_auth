@@ -5,6 +5,23 @@ const { validationResult } = require('express-validator');
 
 const User = require('../models/user');
 
+exports.getLocked = async (req, res, next) => {
+	if (!req.isAuth) {
+		return res.status(403).json({ message: 'User Not authorized' });
+	}
+
+	const userId = req.userId || null;
+
+	const user = await User.findById(userId);
+
+	if (!user) {
+		return res.status(401).json({ user: 'No user' });
+	}
+	return res
+		.status(200)
+		.json({ user: { name: user.name, email: user.email } });
+};
+
 exports.postsignup = async (req, res, next) => {
 	const { name, email, password, cpassword } = req.body;
 

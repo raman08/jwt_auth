@@ -1,4 +1,3 @@
-
 POST http://localhost:3000/user/signup HTTP/1.1
 content-type: application/json
 
@@ -18,3 +17,7 @@ content-type: application/json
 	"email": "raman@test.com",
 	"password": "raman08"
 }
+
+###
+GET http://localhost:3000/user/locked
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbWFuQHRlc3QuY29tIiwiaWQiOiI2MGRhMmIyMmIzYTMwNDEzNWQxZjIxYTgiLCJpYXQiOjE2MjQ5ODgyODYsImV4cCI6MTYyNDk5MTg4Nn0.VniBpdvrpNKtbEwYUo_azQF7L0KWs00v4MbSE0JKcOI

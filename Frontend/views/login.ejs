@@ -6,23 +6,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+		integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<h2>Signup</h2>
+	<h2>Login</h2>
 
-	<form action="/user/signup" method="post">
-		<label for="name">Name</label>
-		<input type="text" name="name" required>
-		<label for="email">E-mail</label>
+	<form id="login_form">
+		<label for="email">Email</label>
 		<input type="text" name="email" required>
 		<label for="password">Password</label>
 		<input type="password" name="password" required>
-		<label for="cpassword">Confirm Password</label>
-		<input type="password" name="cpassword" required>
 
-		<button type="submit">Sign Up</button>
+		<button type="submit" id="login_button">Login</button>
+
 	</form>
+
+	<script src="/js/index.js"></script>
 </body>
 
 </html>
